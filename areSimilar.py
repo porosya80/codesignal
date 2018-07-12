@@ -1,26 +1,22 @@
 def areSimilar(a, b):
-    # print(a == b)
-    flag = True
-
+    list1 = []
+    list2 = []
     for i in range(len(a)):
-        if a[i] != b[i] and flag:
-
-            flag = False
-            if a[i] in b[i:]:
-                item = b.index(a[i], i)
-                b[i], b[item] = b[item], b[i]
-            else:
-                return False
-
         if a[i] != b[i]:
+            list1.append(a[i])
+            list2.append(b[i])
+    if len(list1) < 2 and set(list1) == set(list2):
+        return True
+    else:
+        return False
 
-            return False
 
-    return True
+def areSimilar_smart(a, b):
+    return sorted(a) == sorted(b) and sum(i != j for i, j in zip(a, b)) < 3
 
 
-a = [2, 9, 6, 8, 9, 5]
-b = [2, 5, 6, 8, 9, 9]
+a = [1, 2, 2]
+b = [2, 1, 1]
 print(areSimilar(a, b))
 
 
