@@ -11,8 +11,6 @@ def minesweeper(matrix):
     return matrix
 
 
-
-
 matrix = [[True, False, False, True],
           [False, False, True, False],
           [True, True, False, True]]
