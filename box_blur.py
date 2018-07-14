@@ -4,11 +4,11 @@ def boxBlur(image):
     indices = [(i, j) for i in offset for j in offset]
     result = []
     # tmp = 0
-    # print(indices)
+    # print(indices)column
     for x, row in enumerate(image[1:-1], 1):
         # print(x, row)
         result.append([])
-        for y, column in enumerate(row[1:-1], 1):
+        for y, _ in enumerate(row[1:-1], 1):
             tmp = 0
             for pos in indices:
                 row = x + pos[0]
