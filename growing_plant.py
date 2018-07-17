@@ -1,7 +1,7 @@
 def growingPlant(upSpeed, downSpeed, desiredHeight):
     counter = 0
     height = 0
-    while height <= desiredHeight :
+    while height <= desiredHeight:
         counter += 1
         # print(height)
         height += upSpeed
@@ -11,7 +11,7 @@ def growingPlant(upSpeed, downSpeed, desiredHeight):
     return counter
 
 
-upSpeed = 10 
-downSpeed = 9 
+upSpeed = 10
+downSpeed = 9
 desiredHeight = 4
 print(growingPlant(upSpeed, downSpeed, desiredHeight))
