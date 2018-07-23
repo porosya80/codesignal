@@ -11,7 +11,7 @@
 #     return flag
 
 import string
-
+import
 
 def isBeautifulString(inputString):
 
